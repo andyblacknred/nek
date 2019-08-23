@@ -1,0 +1,21 @@
+<section class="top-section">
+    <div class="rooms-block">
+        <ul class="rooms">
+            <li class="room" *ngFor="let item of this.fourRooms; let i = index">
+                <img src="http://smartfactory.lt/en/wp-content/uploads/sites/2/2016/09/grey-block.png" alt="room">
+                <div class="top-info">
+                    <h3 class="title">Room {{ item.roomNumber }}</h3>
+                    <p class="description">{{ item.description }}</p>
+                    <p class="area"><span>area:</span> {{ item.square }} m<sup>2</sup></p>
+                    <p *ngIf="item?.levels"class="levels"><span>levels:</span> {{ item?.levels }}</p>
+                    <p *ngIf="item?.floor" class="floor"><span>floor:</span> {{item?.floor}}</p>
+                </div>
+                <div class="bottom-info">
+                    <p *ngIf="item.isRepair" class="repair">repair</p>
+                    <p *ngIf="item.isOffice" class="type office">office</p>
+                    <p *ngIf="!item.isOffice" class="type">utility room</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>

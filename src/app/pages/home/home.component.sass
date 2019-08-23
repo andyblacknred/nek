@@ -1,0 +1,82 @@
+.top-section
+  min-height: 100vh
+  min-width: 700px
+  display: flex
+  justify-content: center
+  align-items: center
+  background: linear-gradient(320deg, #e9eb24, #ff5bb4, #1498e3)
+  background-size: 600% 600%
+  -webkit-animation: gradient 30s ease infinite
+  -moz-animation: gradient 30s ease infinite
+  -o-animation: gradient 30s ease infinite
+  animation: gradient 30s ease infinite
+  @-webkit-keyframes gradient
+    0%
+      background-position: 5% 0%
+    50%
+      background-position: 96% 100%
+    100%
+      background-position: 5% 0%
+  @-moz-keyframes gradient
+    0%
+      background-position:  5% 0%
+    50%
+      background-position: 96% 100%
+    100%
+      background-position: 5% 0%
+  @-o-keyframes gradient
+    0%
+      background-position: 5% 0%
+    50%
+      background-position: 96% 100%
+    100%
+      background-position: 5% 0%
+  @keyframes gradient
+    0%
+      background-position: 5% 0%
+    50%
+      background-position: 96% 100%
+    100%
+      background-position: 5% 0%
+  .rooms-block
+    background: #fff
+    box-shadow: 10px 10px 17px -7px rgba(0,0,0,0.23)
+    max-width: 1000px
+    width: 100%
+    border-radius: 8px
+    padding: 10px
+    margin: 20px
+    .rooms
+      display: flex
+      justify-content: space-between
+      .room
+        width: 24%
+        background-color: #F3F3F3
+        position: relative
+        padding-bottom: 50px
+        img
+          width: 100%
+          height: 200px
+        .top-info,
+        .bottom-info
+          padding: 15px
+        .top-info
+          .title
+            text-transform: uppercase
+            font-size: 20px
+            margin-bottom: 15px
+          p
+            font-size: 16px
+            span
+              font-weight: 700
+        .bottom-info
+          position: absolute
+          bottom: 0
+          right: 0
+          text-align: right
+          .repair
+            color: red
+          .type
+            color: grey
+            &.office
+              color: #00ae00
