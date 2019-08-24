@@ -10,6 +10,7 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 export class HomeComponent implements OnInit {
 
   public fourRooms = [];
+  public fourRoomsBottom = [];
   public pageName = "Rooms";
 
   constructor(public roomsGenerator: RoomsGeneratorService) { }
@@ -19,6 +20,7 @@ export class HomeComponent implements OnInit {
       let roomsCount = this.roomsGenerator.randomInteger(4, 10);
       this.roomsGenerator.rooms = this.roomsGenerator.createRoomsArray(roomsCount);
       this.fourRooms = this.roomsGenerator.rooms.slice(0,4);
+      this.fourRoomsBottom = this.roomsGenerator.rooms.slice(0,4);
       console.log(this.roomsGenerator.rooms);
     }
   }
@@ -26,7 +28,5 @@ export class HomeComponent implements OnInit {
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.fourRooms, event.previousIndex, event.currentIndex);
   }
-
-
 
 }
