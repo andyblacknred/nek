@@ -1,0 +1,53 @@
+section
+  background-color: #fff
+
+.bottom-link-block
+  padding: 30px 0
+  > a
+    $borderWidth: 3px
+    width: 100%
+    padding: 30px
+    text-align: center
+    max-width: 200px
+    display: block
+    margin: 0 auto
+    text-decoration: none
+    position: relative
+    border-radius: $borderWidth
+    z-index: 1
+    text-transform: uppercase
+    color: #000
+    font-weight: 700
+    &::after
+      $borderWidth: 3px
+      $doubleBorderWidth: $borderWidth * 2
+      content: ' '
+      position: absolute
+      top: -1 * $borderWidth
+      left: -1 * $borderWidth
+      height: calc(100% + #{$doubleBorderWidth})
+      width: calc(100% + #{$doubleBorderWidth})
+      background: linear-gradient(320deg, #e9eb24, #ff5bb4, #1498e3)
+      border-radius: 2 * $borderWidth
+      z-index: -1
+      animation: animatedgradient 30s ease alternate infinite
+      background-size: 300% 300%
+    & > span
+      position: absolute
+      top: 3px
+      bottom: 3px
+      left: 3px
+      right: 3px
+      display: flex
+      align-items: center
+      justify-content: center
+      background-color: #fff
+    @keyframes animatedgradient
+      0%
+        background-position: 0% 50%
+
+      50%
+        background-position: 100% 50%
+
+      100%
+        background-position: 0% 50%

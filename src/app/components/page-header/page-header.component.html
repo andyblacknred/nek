@@ -1,1 +1,7 @@
-<p>page-header works!</p>
+<div class="header-root">
+    <h3>{{pageName}}</h3>
+    <div class="line"></div>
+    <form #form="ngForm" (submit)="onSubmit()">
+        <input [(ngModel)]="inputVal" placeholder="Search" name="value">
+    </form>
+</div>

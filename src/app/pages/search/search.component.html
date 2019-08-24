@@ -1,1 +1,21 @@
-<p>search works!</p>
+<section>
+    <app-page-header [pageName]="pageName"></app-page-header>
+    <div class="content-wrapper">
+        <ul class="results" >
+            <li class="result" *ngFor="let item of list; let i = index">
+                <img src="http://smartfactory.lt/en/wp-content/uploads/sites/2/2016/09/grey-block.png" alt="room">
+                <div class="text-info">
+                    <div class="top-part">
+                        <h3 class="title">Title: "{{ item.title }}"</h3>
+                        <p>{{ item.body }}</p>
+                        <p><span>userId:</span> {{ item.userId }} m<sup>2</sup></p>
+                        <p><span>id:</span> {{ item.id }} m<sup>2</sup></p>
+                    </div>
+                    <div class="bottom-part">
+                        <a href="#">read more</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { RoomsGeneratorService } from "../../service/rooms-generator.service";
+import {Router} from "@angular/router";
+import {SearchService} from "../../service/search.service";
 
 @Component({
   selector: 'app-rooms',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoomsComponent implements OnInit {
 
-  constructor() { }
+  public pageName = "All Rooms";
+  public list: any;
+
+  constructor(public roomsGenerator: RoomsGeneratorService, public router: Router) { }
 
   ngOnInit() {
+    this.list = this.roomsGenerator.rooms;
+    if (!this.list.length) {
+      this.router.navigate(['/']);
+    }
   }
 
 }

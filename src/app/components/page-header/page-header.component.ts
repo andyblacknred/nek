@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { SearchService } from "../../service/search.service";
+
 
 @Component({
   selector: 'app-page-header',
@@ -7,7 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageHeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(public searchService: SearchService) { }
+
+  @Input() pageName: string;
+  public inputVal: string = '';
+  public form: any;
+
+  onSubmit() {
+    this.searchService.search(this.inputVal);
+  }
 
   ngOnInit() {
   }

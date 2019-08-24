@@ -1,7 +1,7 @@
 <section class="top-section">
     <div class="rooms-block">
-        <ul class="rooms">
-            <li class="room" *ngFor="let item of this.fourRooms; let i = index">
+        <ul class="rooms" cdkDropListOrientation="horizontal" cdkDropList (cdkDropListDropped)="drop($event)" >
+            <li class="room" *ngFor="let item of fourRooms; let i = index" cdkDrag>
                 <img src="http://smartfactory.lt/en/wp-content/uploads/sites/2/2016/09/grey-block.png" alt="room">
                 <div class="top-info">
                     <h3 class="title">Room {{ item.roomNumber }}</h3>
@@ -17,5 +17,14 @@
                 </div>
             </li>
         </ul>
+    </div>
+</section>
+<section class="bottom-section">
+    <div class="content-wrapper">
+        <app-page-header [pageName]="pageName"></app-page-header>
+        <app-list [list]="fourRooms"></app-list>
+        <div class="bottom-link-block">
+            <a [routerLink]="['/rooms']" ><span>All rooms</span></a>
+        </div>
     </div>
 </section>

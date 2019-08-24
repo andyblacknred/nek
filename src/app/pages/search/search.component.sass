@@ -1,0 +1,45 @@
+section
+  background-color: #fff
+
+.content-wrapper
+  width: 100%
+  max-width: 1200px
+  margin: 0 auto
+
+.results
+  padding: 5px 0
+  .result
+    display: flex
+    margin: 15px
+    &:nth-child(even)
+      flex-direction: row-reverse
+      text-align: right
+      .text-info
+        .bottom-part
+          left: auto
+          right: 0
+    img
+      height: 200px
+      width: 300px
+    .text-info
+      position: relative
+      width: 50%
+      .top-part,
+      .bottom-part
+        padding: 5px 15px
+      .top-part
+        padding-bottom: 75px
+        .title
+          text-transform: uppercase
+          font-size: 20px
+          margin-bottom: 15px
+          font-weight: 900
+        p
+          font-size: 14px
+          span
+            font-weight: 700
+      .bottom-part
+        position: absolute
+        bottom: 0
+        left: 0
+        text-align: right

@@ -1,1 +1,7 @@
-<p>rooms works!</p>
+<section>
+    <app-page-header [pageName]="pageName"></app-page-header>
+    <app-list [list]="this.list"></app-list>
+    <div class="bottom-link-block">
+        <a [routerLink]="['/']" ><span>Back to Homepage</span></a>
+    </div>
+</section>

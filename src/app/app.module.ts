@@ -9,6 +9,13 @@ import { RoomsComponent } from './pages/rooms/rooms.component';
 import { ListComponent } from './components/list/list.component';
 import { PageHeaderComponent } from './components/page-header/page-header.component';
 
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +27,10 @@ import { PageHeaderComponent } from './components/page-header/page-header.compon
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    DragDropModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
