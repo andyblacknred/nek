@@ -5,7 +5,10 @@ import { Injectable } from '@angular/core';
 })
 export class RoomsGeneratorService {
 
+  // declare variables
   public rooms = [];
+  public fourRoomsTop = [];
+  public fourRoomsBottom = [];
 
   constructor() { }
 

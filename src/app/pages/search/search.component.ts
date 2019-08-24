@@ -11,13 +11,10 @@ export class SearchComponent implements OnInit {
 
   constructor(public searchService: SearchService, public router: Router) { }
 
-  public list: any;
-  public pageName: any;
+  public pageName = 'Search result: ';
 
   ngOnInit() {
-    this.pageName = 'Search result: ' + this.searchService.request;
-    this.list = this.searchService.response;
-    if (!this.list) {
+    if (!this.searchService.response) {
       this.router.navigate(['/']);
     }
   }
