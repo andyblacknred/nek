@@ -20,7 +20,6 @@ export class SearchService {
     }
     this.http.get(url).subscribe(response => {
       this.response = response;
-      console.log(request);
       console.log(this.response);
       this.router.navigate(['/search']);
     })

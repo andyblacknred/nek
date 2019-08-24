@@ -3,26 +3,19 @@
   .room
     display: flex
     margin: 30px 15px
-    &:nth-child(even)
-      flex-direction: row-reverse
-      text-align: right
-      .text-info
-        .bottom-part
-          left: auto
-          right: 0
+    flex-wrap: wrap
     img
       height: 200px
       width: 100%
-      max-width: 300px
       object-fit: cover
     .text-info
       position: relative
-      width: 50%
+      width: 100%
       .top-part,
       .bottom-part
         padding: 5px 15px
       .top-part
-        padding-bottom: 75px
+        padding-bottom: 35px
         .title
           text-transform: uppercase
           font-size: 20px
@@ -40,3 +33,20 @@
         a
           color: #ff00ae
           font-size: 13px
+
+@media (min-width: 768px)
+  .rooms
+    .room
+      flex-wrap: nowrap
+      &:nth-child(even)
+        flex-direction: row-reverse
+        text-align: right
+      .text-info
+        .bottom-part
+          left: auto
+          right: 0
+      img
+        max-width: 300px
+      .text-info
+        width: 50%
+

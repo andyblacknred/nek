@@ -10,25 +10,19 @@ section
   padding: 5px 0
   .result
     display: flex
-    margin: 15px
-    &:nth-child(even)
-      flex-direction: row-reverse
-      text-align: right
-      .text-info
-        .bottom-part
-          left: auto
-          right: 0
+    flex-wrap: wrap
+    margin: 30px 15px
     img
       height: 200px
-      width: 300px
+      width: 100%
     .text-info
       position: relative
-      width: 50%
+      width: 100%
       .top-part,
       .bottom-part
         padding: 5px 15px
       .top-part
-        padding-bottom: 75px
+        padding-bottom: 35px
         .title
           text-transform: uppercase
           font-size: 20px
@@ -42,7 +36,6 @@ section
         position: absolute
         bottom: 0
         left: 0
-        text-align: right
         a
           color: #ff00ae
           font-size: 13px
@@ -97,4 +90,21 @@ section
 
       100%
         background-position: 0% 50%
+
+@media (min-width: 768px)
+  .results
+    .result
+      flex-wrap: nowrap
+      &:nth-child(even)
+        flex-direction: row-reverse
+        text-align: right
+        .text-info
+          width: 50%
+          .bottom-part
+            right: 0
+            left: auto
+      img
+        max-width: 300px
+      .text-info
+        width: 50%
 
