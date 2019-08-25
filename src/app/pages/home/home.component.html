@@ -1,8 +1,18 @@
+<!-- top section with gradient -->
 <section class="top-section">
+
+    <!-- block with rooms (desktop version) -->
     <div class="rooms-block">
         <ul class="rooms" cdkDropListOrientation="horizontal" cdkDropList (cdkDropListDropped)="drop($event)" >
+
+            <!-- cycle with list-items -->
             <li class="room" *ngFor="let item of roomsGenerator.fourRoomsTop; let i = index" cdkDrag>
+
+                <!-- rooms image -->
                 <img src="http://smartfactory.lt/en/wp-content/uploads/sites/2/2016/09/grey-block.png" alt="room">
+                <!-- rooms image end -->
+
+                <!-- rooms details -->
                 <div class="top-info">
                     <h3 class="title">Room {{ item.roomNumber }}</h3>
                     <p class="description">{{ item.description }}</p>
@@ -15,13 +25,27 @@
                     <p *ngIf="item.isOffice" class="type office">office</p>
                     <p *ngIf="!item.isOffice" class="type">utility room</p>
                 </div>
+                <!-- rooms details end -->
+
             </li>
+            <!-- cycle with list-items end -->
+
         </ul>
     </div>
+    <!-- block with rooms (desktop version) end -->
+
+    <!-- block with rooms (mobile version) -->
     <div class="rooms-block mobile">
         <ul class="rooms" cdkDropListOrientation="vertical" cdkDropList (cdkDropListDropped)="drop($event)" >
+
+            <!-- cycle with list-items -->
             <li class="room" *ngFor="let item of roomsGenerator.fourRoomsTop; let i = index" cdkDrag>
+
+                <!-- rooms image -->
                 <img src="http://smartfactory.lt/en/wp-content/uploads/sites/2/2016/09/grey-block.png" alt="room">
+                <!-- rooms image end -->
+
+                <!-- rooms details -->
                 <div class="top-info">
                     <h3 class="title">Room {{ item.roomNumber }}</h3>
                     <p class="description">{{ item.description }}</p>
@@ -34,16 +58,37 @@
                     <p *ngIf="item.isOffice" class="type office">office</p>
                     <p *ngIf="!item.isOffice" class="type">utility room</p>
                 </div>
+                <!-- rooms details end -->
+
             </li>
+            <!-- cycle with list-items end -->
+
         </ul>
     </div>
+    <!-- block with rooms (mobile version) end -->
+
 </section>
+<!-- top section with gradient end -->
+
+<!-- bottom section -->
 <section class="bottom-section">
     <div class="content-wrapper">
+
+        <!-- page header component -->
         <app-page-header [pageName]="pageName"></app-page-header>
+        <!-- page header component end -->
+
+        <!-- list component -->
         <app-list [list]="roomsGenerator.fourRoomsBottom"></app-list>
+        <!-- list component end -->
+
+        <!-- link to list with all rooms -->
         <div class="bottom-link-block">
             <a [routerLink]="['/rooms']" ><span>All rooms</span></a>
         </div>
+        <!-- link to list with all rooms end-->
+
+
     </div>
 </section>
+<!-- bottom section end -->

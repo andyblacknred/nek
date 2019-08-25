@@ -1,6 +1,12 @@
-<ul class="rooms" >
+<ul class="rooms">
+    <!-- cycle with list-items -->
     <li class="room" *ngFor="let item of list; let i = index">
+
+        <!-- rooms image -->
         <img src="http://smartfactory.lt/en/wp-content/uploads/sites/2/2016/09/grey-block.png" alt="room">
+        <!-- rooms image end -->
+
+        <!-- rooms details -->
         <div class="text-info">
             <div class="top-part">
                 <h3 class="title">Room {{ item.roomNumber }}</h3>
@@ -16,5 +22,8 @@
                 <a href="#">read more</a>
             </div>
         </div>
+        <!-- rooms details end -->
+
     </li>
+    <!-- cycle with list-items end -->
 </ul>

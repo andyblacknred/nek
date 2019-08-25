@@ -13,9 +13,6 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
-
-
-
 @NgModule({
   declarations: [
     AppComponent,

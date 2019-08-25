@@ -1,9 +1,19 @@
 <section>
     <div class="content-wrapper">
+
+        <!-- page header component -->
         <app-page-header [pageName]="pageName"></app-page-header>
-        <app-list [list]="this.list"></app-list>
+        <!-- page header component end -->
+
+        <!-- list component -->
+        <app-list [list]="this.roomsGenerator.rooms"></app-list>
+        <!-- list component end -->
+
+        <!-- link to homepage -->
         <div class="bottom-link-block">
             <a [routerLink]="['/']" ><span>Back to Homepage</span></a>
         </div>
+        <!-- link to homepage end -->
+
     </div>
 </section>

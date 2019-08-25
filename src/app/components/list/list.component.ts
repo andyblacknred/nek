@@ -6,14 +6,15 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./list.component.sass']
 })
 
-
 export class ListComponent implements OnInit {
 
   constructor() { }
 
+  // declare variables
   @Input() list: any;
 
   ngOnInit() {
+
   }
 
 

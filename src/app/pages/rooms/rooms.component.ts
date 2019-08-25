@@ -10,14 +10,14 @@ import {SearchService} from "../../service/search.service";
 })
 export class RoomsComponent implements OnInit {
 
+  // declare variables
   public pageName = "All Rooms";
-  public list: any;
 
   constructor(public roomsGenerator: RoomsGeneratorService, public router: Router) { }
 
+  // go to homepage when rooms-list is empty (homepage will generate new rooms-list)
   ngOnInit() {
-    this.list = this.roomsGenerator.rooms;
-    if (!this.list.length) {
+    if (!this.roomsGenerator.rooms.length) {
       this.router.navigate(['/']);
     }
   }

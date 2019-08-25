@@ -11,8 +11,10 @@ export class SearchComponent implements OnInit {
 
   constructor(public searchService: SearchService, public router: Router) { }
 
+  // declare variables
   public pageName = 'Search result: ';
 
+  // go to homepage when when response is undefined
   ngOnInit() {
     if (!this.searchService.response) {
       this.router.navigate(['/']);

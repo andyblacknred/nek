@@ -9,9 +9,11 @@ export class SearchService {
 
   constructor(private http: HttpClient, private router: Router) { }
 
+  // declare variables
   public request: any;
   public response: {};
 
+  // search request to https://jsonplaceholder.typicode.com/posts and navigate to search-page to show results
   search(request) {
     this.request = request;
     let url = `https://jsonplaceholder.typicode.com/posts`;

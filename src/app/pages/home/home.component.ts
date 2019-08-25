@@ -7,12 +7,15 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.sass']
 })
+
 export class HomeComponent implements OnInit {
 
+  // declare variables
   public pageName = "Rooms";
 
   constructor(public roomsGenerator: RoomsGeneratorService) { }
 
+  // generate rooms on first load
   ngOnInit() {
     if (this.roomsGenerator.rooms.length == 0) {
       let roomsCount = this.roomsGenerator.randomInteger(4, 10);
@@ -23,6 +26,7 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  // drag-n-drop function
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.roomsGenerator.fourRoomsTop, event.previousIndex, event.currentIndex);
   }

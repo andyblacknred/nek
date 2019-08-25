@@ -1,7 +1,17 @@
 <div class="header-root">
+
+    <!-- page name -->
     <h3>{{pageName}}</h3>
+    <!-- page name end -->
+
+    <!-- middle grey line -->
     <div class="line"></div>
+    <!-- middle grey line end -->
+
+    <!-- search form -->
     <form #form="ngForm" (submit)="onSubmit()">
         <input [(ngModel)]="inputVal" placeholder="Search" name="value">
     </form>
+    <!-- search form -->
+
 </div>

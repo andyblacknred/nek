@@ -11,10 +11,12 @@ export class PageHeaderComponent implements OnInit {
 
   constructor(public searchService: SearchService) { }
 
+  // declare variables
   @Input() pageName: string;
   public inputVal: string = '';
   public form: any;
 
+  // search form onSubmit
   onSubmit() {
     this.searchService.search(this.inputVal);
   }
